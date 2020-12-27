@@ -1,4 +1,23 @@
+<mat-toolbar color="primary">
+  <mat-icon (click)="drawer.toggle()"  style="cursor: pointer;">menu</mat-icon>
+  <span class="example-spacer"></span>
 
+  <span>HR Application</span>
+  <span class="example-spacer"></span>
 
-
+</mat-toolbar>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+      <mat-selection-list #navBarOptions [multiple]="false">
+          <mat-list-option *ngFor="let option of side_nav_bar_options" [value]="option" (click)="navigateToOption(navBarOptions)">
+            {{option}}
+          </mat-list-option>
+        </mat-selection-list>
+  </mat-drawer>
+  <div class="example-sidenav-content">
 <router-outlet></router-outlet>
+
+</div>
+
+</mat-drawer-container>
+

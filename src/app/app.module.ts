@@ -13,7 +13,8 @@ import {MatListModule} from '@angular/material/list';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
-import { DashboardComponent } from './dashboard/dashboard.component'; 
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     SignUpComponent,
     AddEmployeeComponent,
-    DashboardComponent
+    DashboardComponent,
+    PageNotFoundComponent
   ],
   imports: [
     MatListModule,
